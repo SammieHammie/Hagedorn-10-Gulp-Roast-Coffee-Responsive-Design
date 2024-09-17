@@ -1,0 +1,484 @@
+/* GENERAL STYLES START */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #082B59;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #59331d;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  border-bottom: 10px solid #d98555;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+  font-size: 1.3rem;
+}
+
+nav .logo img {
+  max-width: 150px;
+}
+
+nav .logo {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: #d98555;
+}
+
+.main-bkgd {
+  background: #ffffff url('https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg') repeat-x bottom;
+  padding-bottom: 300px;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/*GENERAL STYLES END*/
+
+
+
+
+/*PRODUCT PAGE START*/
+
+.product-alternating {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-alternating img {
+  border-radius: 10px; /* Adjust the value as needed */
+}
+
+.product-alternating h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  grid-gap: 20px; /* Space between items */
+  margin-bottom: 40px;
+}
+
+.item.image img {
+  width: 100%;
+  height: auto;
+}
+
+.item.text h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.item.text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/*PRODUCT PAGE END*/
+
+
+
+/*ABOUT PAGE START*/
+
+article {
+  flex-basis: 73%;
+}
+
+figure {
+  margin: 3rem 0 0 0;
+  flex-basis: 25%;
+}
+
+figure img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #59331D;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: #f2f2f2;
+  text-decoration: none;
+  border: 3px solid #59331d;
+}
+
+.button:hover {
+  background-color: #f2f2f2;
+  color: #59331d;
+}
+
+footer {
+  color: #f2f2f2;
+  text-align: center;
+  border-top: 10px solid #d98555;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+footer a {
+  color: #f2f2f2;
+  font-size: 2rem;
+  display: block;
+  margin: 0 1rem 3rem;
+}
+
+/*ABOUT PAGE END*/
+
+
+
+/*CONTACT PAGE START*/
+
+.menu-img img {
+  max-width: 100%; /* Image scales responsively */
+  border-radius: 10px; /* Smooth image corners */
+}
+
+.contact-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: text and image */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+  gap: 40px; /* Space between text and image */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/*CONTACT PAGE END*/
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUIERIES */
+
+
+/* MOBILE SIZE*/
+
+@media (max-width: 768px) {
+
+
+  /* ABOUT PAGE START */
+  .main {
+    display: flex;
+    flex-direction: column; /* Stack vertically for mobile view */
+    align-items: center; /* Center content horizontally */
+    padding: 1rem;
+  }
+
+  article {
+    flex-basis: 100%;
+    margin-bottom: 1rem; /* Add space below article */
+    text-align: left; /* Center text for consistency */
+    padding: 0 1rem; /* Add padding to make the content fill the page */
+  }
+
+  figure {
+    flex-basis: 100%;
+    margin: 1rem 0; /* Space around figure */
+    text-align: center; /* Center the image horizontally */
+  }
+
+  figure img {
+    display: block; /* Ensure image is treated as block */
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Adjust border-radius to match the design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow if needed */
+  }
+
+  /* Adjust button style for mobile view */
+  .button {
+    display: block;
+    width: auto; /* Use auto width */
+    max-width: 150px; /* Set a maximum width */
+    text-align: center; /* Center the button horizontally */
+  }
+
+/* ABOUT PAGE END */
+
+
+
+/* NAVIGATION START */
+  nav ul {
+    display: block; /* Stack items vertically */
+    text-align: center; /* Center items horizontally */
+    width: 100%; /* Full width */
+  }
+
+  nav li {
+    display: block; /* Stack list items vertically */
+    margin: 0; /* Remove horizontal margin */
+    padding: 1rem 0; /* Add vertical padding */
+  }
+/* NAVIGATION END */
+
+
+
+/*CONTACT PAGE START*/
+
+  .contact-header {
+    grid-template-columns: 1fr; /* Stack the columns on top of each other */
+    text-align: center; /* Center the text for better readability */
+  }
+/*CONTACT PAGE END*/
+
+
+   
+/*PRODUCT PAGE START*/
+  .product-alternating {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .product-alternating h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns for desktop */
+    grid-gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .item.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+  }
+
+  .item.text h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .item.text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    grid-template-rows: auto; /* Stack items vertically */
+    grid-gap: 20px;
+  }
+
+  .grid-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .item.image img {
+    max-width: 100%;
+    border-radius: 10px; /* Rounded corners for images */
+  }
+/*PRODUCT PAGE END*/
+}
+  
+
+
+
+
+
+
+
+/* TABLET SIZE */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+
+/*ABOUT PAGE START*/
+  .button {
+    display: block;
+    width: auto; /* Use auto width */
+    max-width: 150px; /* Set a maximum width */
+    text-align: center;
+  }
+  
+  .main {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between content and figure */
+  }
+  
+  .main article {
+    flex: 1;
+    max-width: 50%; /* Limit the width to ensure space for the figure */
+  }
+  
+  .main figure {
+    flex: 0 0 auto; /* Prevent the figure from growing */
+    width: 50%; /* Adjust width as needed */
+  }
+  
+  .main h1, .main p, .main .button {
+    margin: 0; /* Remove default margins to better control spacing */
+  }
+/*ABOUT PAGE END*/
+
+
+
+/*NAVIGATION START*/
+  nav .logo{
+    text-align: center;
+  }
+/*NAVIGATION END*/
+
+
+
+/*PRODUCT PAGE START*/
+  .product {
+    flex: 1 1 calc(50% - 1rem); /* Two columns on medium screens */
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* Two columns: one for images, one for text */
+    grid-template-rows: auto; /* Adjust row height based on content */
+    grid-gap: 20px;
+  }
+
+  .item.image {
+    grid-column: 1 / 2; /* Image column */
+  }
+
+  .item.text {
+    grid-column: 2 / 3; /* Text column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+/*PRODUCT PAGE END*/
+}
+
+
+
+
+
+
+
+
+/* DESKTOP SIZE */
+
+@media (min-width: 1200px) {
+
+
+/*ABOUT PAGE START*/
+  .main {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  article {
+    flex-basis: 73%;
+  }
+
+  figure {
+    flex-basis: 25%;
+    margin: 3rem 0 0 0;
+  }
+/*ABOUT PAGE END*/
+
+
+
+/*NAVIGATION START*/
+  nav ul {
+    justify-content: flex-end; /* Move navigation items to the right */
+  }
+  
+  /* Adjust spacing between navigation items for desktop */
+  nav ul li {
+    margin-left: 0.5rem; /* Reduced space between items */
+    margin-top: auto;
+  }
+  
+  nav .logo {
+    margin-right: auto; /* Push the logo to the left */
+    flex: 0 1 auto; /* Ensure the logo takes only necessary space */
+  }
+/*NAVIGATION END*/
+}
+
+
+
+
+
+
+
+
+
